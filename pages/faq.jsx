@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from '../src/components/Link';
+import Head from 'next/head';
 
 export async function getStaticProps() {
   const FAQ_API_URL =
@@ -24,6 +25,9 @@ export default function FAQPage({ faq }) {
   // console.log(faq);
   return (
     <div>
+      <Head>
+        <title>Faq- uma otima aula de next</title>
+      </Head>
       <h1>Alura Cases - Páginas de Perguntas FAQ</h1>
       <Link href="/">Ir para a home</Link>
       <ul>
